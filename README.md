@@ -40,7 +40,3 @@
 - Machine learning algorithm selection and tuning
 - Time-series and historical data analysis
 - Statistical analysis of sports data
-
----
-
-This abstract follows the same format as your previous projects with clear sections, emojis for visual appeal, and systematic point-wise information!
