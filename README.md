@@ -4,6 +4,12 @@ A machine learning project that predicts the **real-time win probability** of IP
 
 ---
 
+## 📊 Demo
+![Win Probability Chart](assets/sample_chart.png)  <!-- add a screenshot -->
+
+---
+
+
 ## 🎯 How It Works
 
 - Trained on IPL data from **2008–2019** (756 matches, 150,000+ deliveries)
