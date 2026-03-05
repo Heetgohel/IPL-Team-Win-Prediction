@@ -1,42 +1,62 @@
-## 📋 Project Abstract
+# 🏏 IPL Match Win Probability Predictor
 
-**IPL Team Win Prediction** - Machine learning-powered cricket match outcome predictor
+A machine learning project that predicts the **real-time win probability** of IPL teams 
+during the 2nd innings, based on match situation like current score, balls left, 
+wickets in hand, and required run rate.
 
-### 🎯 Project Overview
-- 🏏 Predicts the winning team for Indian Premier League (IPL) matches
-- 📊 Data-driven predictions based on historical match statistics
-- 🤖 Machine learning model trained on real IPL match data
+## 📊 Demo
+![Win Probability Chart](assets/sample_chart.png)  <!-- add a screenshot -->
 
-### 🏗️ System Architecture
-- **📓 Jupyter Notebook**: Interactive development environment
-- **📊 Data Analysis**: Exploratory Data Analysis (EDA) on IPL history
-- **🤖 ML Models**: Random Forest / Logistic Regression algorithms
-- **📈 Feature Engineering**: In-game and historical feature extraction
+## 🎯 How It Works
+- Trained on IPL data from **2008–2019** (756 matches, 150,000+ deliveries)
+- Uses **Logistic Regression** with One-Hot Encoding for teams and cities
+- Predicts win/lose probability ball-by-ball during the 2nd innings
+- Achieved **~80.3% accuracy** on test data
 
-### 💻 Technology Stack
-- **Language**:  Python
-- **Data Processing**:  Pandas for data manipulation
-- **Machine Learning**:  Scikit-learn for model training
-- **Visualization**:  Matplotlib for data exploration
-- **Development**:  Jupyter Notebook
+## 🗂️ Project Structure
+ipl-win-predictor/
+├── data/
+│   ├── matches.csv        # Match-level data (756 matches)
+│   └── deliveries.csv     # Ball-by-ball data (150k+ rows)
+├── IPL_Winning_Predictor.ipynb  # Full analysis + model training
+├── pipe.pkl               # Trained model pipeline (optional)
+├── requirements.txt
+└── README.md
 
-### 📦 Dataset Structure
-- **📄 matches.csv**: Match-level historical data
-  - Teams, venues, toss results, match outcomes
-- **⚾ deliveries.csv**: Ball-by-ball detailed data
-  - Over-by-over performance metrics
+## 🧠 Features Used
+| Feature | Description |
+|---|---|
+| batting_team | Team currently batting |
+| bowling_team | Fielding team |
+| city | Match venue city |
+| runs_left | Runs needed to win |
+| balls_left | Balls remaining |
+| wickets | Wickets in hand |
+| crr | Current run rate |
+| rrr | Required run rate |
 
-### ✨ Key Features
-- 🔍 **Exploratory Data Analysis**: Deep insights into IPL match patterns
-- 🎯 **Feature Engineering**: Venue, toss winner, team performance metrics
-- 🤖 **Predictive Modeling**: ML algorithms for match outcome prediction
-- 📈 **Historical Analysis**: Trend identification from past matches
-- 🏆 **Win Probability**: Calculate winning chances for competing teams
-- 📊 **Data Visualization**: Match statistics and trends visualization
+## 🚀 Run Locally
+git clone https://github.com/Heetgohel/IPL-Team-Win-Prediction
+cd IPL-Team-Win-Prediction
+pip install -r requirements.txt
+jupyter notebook IPL_Winning_Predictor.ipynb
 
-### 🎓 Learning Outcomes
-- Sports analytics and prediction modelling
-- Feature engineering for classification problems
-- Machine learning algorithm selection and tuning
-- Time-series and historical data analysis
-- Statistical analysis of sports data
+## 📦 Tech Stack
+- Python 3.8
+- Pandas, NumPy
+- Scikit-learn (Logistic Regression, Pipeline, ColumnTransformer)
+- Matplotlib
+
+## 📈 Results
+The model achieves **80.3% accuracy**. Win probability updates after each over 
+and responds correctly to wickets falling and scoring acceleration.
+```
+
+---
+
+**5. `requirements.txt`** 
+```
+pandas
+numpy==
+scikit-learn
+matplotlib
