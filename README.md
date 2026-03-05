@@ -50,14 +50,5 @@ jupyter notebook IPL_Winning_Predictor.ipynb
 ## 📈 Results
 The model achieves **80.3% accuracy**. Win probability updates after each over 
 and responds correctly to wickets falling and scoring acceleration.
-```
 
 ---
-
-**5. `requirements.txt`** 
-```
-pandas
-numpy==
-scikit-learn
-matplotlib
-```
