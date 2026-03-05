@@ -50,5 +50,27 @@ jupyter notebook IPL_Winning_Predictor.ipynb
 ## 📈 Results
 The model achieves **80.3% accuracy**. Win probability updates after each over 
 and responds correctly to wickets falling and scoring acceleration.
+```
 
 ---
+
+## 🟡 Nice to Have — Polish
+
+**3. Add a `.gitignore` file** to avoid accidentally committing junk:
+```
+# .gitignore
+*.pyc
+__pycache__/
+.ipynb_checkpoints/
+*.pkl
+.DS_Store
+```
+
+**4. Add a screenshot/chart** — take a screenshot of the win probability chart from your notebook and put it in an `assets/` folder. Link it in the README. This is the single biggest visual upgrade.
+
+**5. Check `requirements.txt`** — make sure it has exact versions:
+```
+pandas==1.2.4
+numpy==1.20.1
+scikit-learn==0.24.1
+matplotlib==3.3.4
